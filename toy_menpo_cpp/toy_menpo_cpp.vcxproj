@@ -152,9 +152,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="toy_menpo_cpp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
