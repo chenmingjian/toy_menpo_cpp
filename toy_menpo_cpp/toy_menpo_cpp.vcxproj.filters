@@ -15,8 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="toy_menpo_cpp.cpp">
+    <ClInclude Include="include\AAM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tset.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\AAM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\image.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
