@@ -1,45 +1,29 @@
 #include "../include/AAM.h"
+#include "../include/builder.hpp"
 
 using namespace menpo;
 
-std::vector<cv::Point2f> compute_reference_shape()
-{
-	return std::vector<cv::Point2f>();
-}
-
-image rescale_images_to_reference_shape()
-{
-	return image();
-}
 
 cv::Mat _build_shape_model()
 {
-	return;
+	return cv::Mat();
 }
 
-image compute_features()
-{
-	return image();
-}
 
-image scale_images()
-{
-	return image();
-}
 
 image _warp_images()
 {
-	return;
+	return image();
 }
 
 std::vector<cv::Point2f> PCAModel(image)
 {
-		
+	return std::vector<cv::Point2f>();
 }
 
 AAM::AAM(std::vector<image> &images, int diagonal, std::vector<float> scales, 
-	void(*transform)(), void(*holistic_features)() = NULL, 
-	std::vector<int> max_shape_components, std::vector<int> max_appearance_components):
+	void(*transform)(), std::vector<int> max_shape_components, std::vector<int> max_appearance_components,
+	void(*holistic_features)() = NULL):
 	diagonal(diagonal), 
 	scales(scales), 
 	transform(transform), 
@@ -53,12 +37,12 @@ AAM::AAM(std::vector<image> &images, int diagonal, std::vector<float> scales,
 void AAM::_train(std::vector<image> *images)
 {
 	std::vector<cv::Mat> shape_models;
-	reference_shape = compute_reference_shape();
+	//this->reference_shape = compute_reference_shape();
 	for (int iScale = 0; iScale < scales.size(); ++iScale)
 	{
 		for (auto i : *images)
 		{
-			image images = rescale_images_to_reference_shape();
+			//image images = rescale_images_to_reference_shape();
 			image feature_images = compute_features();
 			if (scales.at(iScale) != 1.0)
 			{

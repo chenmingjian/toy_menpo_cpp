@@ -8,7 +8,7 @@ namespace menpo {
 	{
 		public:
 			
-			AAM(std::vector<image>& images, int diagonal, std::vector<float> scales, void(*transform)(), void(*holistic_features)(), std::vector<int> max_shape_components, std::vector<int> max_appearance_components);
+			AAM(std::vector<image>& images, int diagonal, std::vector<float> scales, void(*transform)(), std::vector<int> max_shape_components, std::vector<int> max_appearance_components, void(*holistic_features)());
 			void _train(std::vector<image>* images);
 			~AAM();
 
