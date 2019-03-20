@@ -51,6 +51,7 @@ void AAM::_train(std::vector<image> *images)
 			else
 			{
 				image scaled_images = feature_images;
+
 			}
 			std::vector<cv::Point2f> scale_shapes = i.landmark();
 			cv::Mat shape_model = _build_shape_model();
