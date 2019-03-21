@@ -262,8 +262,9 @@ __pycache__/
 
 # CHEN
 *.sln
-.gitignore
+
 .gitattributes
 *.vcxproj
 *.vcxproj.filters
 *.hint
+/toy_menpo_cpp/build
